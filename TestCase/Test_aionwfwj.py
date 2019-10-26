@@ -16,6 +16,7 @@ class Test_aionwfwj(unittest.TestCase):
         self.driver = driver.openbrowser(self)
         openresult = 0
         dk = dkPage(self.driver)
+        dk.input_office_username()
         dk.input_office_username('tianjie')
         dk.input_office_password('cetcwe123!')
         dk.click_office_btn()
