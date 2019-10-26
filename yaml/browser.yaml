@@ -1,0 +1,25 @@
+brwserType:
+  browserName : Firefox
+  #browserName : Chrome
+  #browserName : IE
+
+testUrl:
+  #URL : http://192.168.63.146:18080/webapp/
+  URL : http://10.254.0.80:18080/webapp
+
+testUrlMobile:
+  URL : http://10.2.87.115:8089/www/#/login
+  #URL : http://10.2.86.242:8089/www/#/login
+
+jcyj:
+  commit: /html/body/div[1]/div/div[2]/div[1]/div/div/div[3]/button[1]
+  agree: //*[@id="agree_radio1"]
+  disagree: //*[@id="agree_radio2"]
+  other: //*[@id="agree_radio3"]
+  save: /html/body/div[1]/div/div[2]/div[1]/div/div/div[3]/button[2]
+
+ptyj:
+  textarea: //*[@id="comment_textarea"]
+
+confirm: //*[@id="grcsp_submitInWindowButton"]
+next: //*[@id="processFormSubmitNext"]
