@@ -116,19 +116,19 @@ function html_escape(s) {
 <div class='heading'>
 <h1>测试报告</h1>
 <p class='attribute'><strong>Tester : </strong> QA</p>
-<p class='attribute'><strong>Start Time : </strong> 2019-10-28 19:09:47</p>
-<p class='attribute'><strong>Duration : </strong> 0:00:05.697072</p>
-<p class='attribute'><strong>Status : </strong> ALL 1 Error 1, Passing rate: 0.00%</p>
+<p class='attribute'><strong>Start Time : </strong> 2019-10-28 19:51:39</p>
+<p class='attribute'><strong>Duration : </strong> 0:05:07.060102</p>
+<p class='attribute'><strong>Status : </strong> ALL 3 Pass 3, Passing rate: 100.00%</p>
 
 <p class='description'>测试用例执行情况</p>
 </div>
 
 
 <p id='show_detail_line'>
-<a class="btn btn-primary" href='javascript:showCase(0)'>Summary{ 0.00% }</a>
+<a class="btn btn-primary" href='javascript:showCase(0)'>Summary{ 100.00% }</a>
 <a class="btn btn-danger" href='javascript:showCase(1)'>Failed{ 0 }</a>
-<a class="btn btn-success" href='javascript:showCase(2)'>Passed{ 0 }</a>
-<a class="btn btn-info" href='javascript:showCase(3)'>ALL{ 1 }</a>
+<a class="btn btn-success" href='javascript:showCase(2)'>Passed{ 3 }</a>
+<a class="btn btn-info" href='javascript:showCase(3)'>ALL{ 3 }</a>
 </p>
 <table id='result_table' class="table table-condensed table-bordered table-hover">
 <colgroup>
@@ -148,53 +148,37 @@ function html_escape(s) {
     <td>View</td>
 </tr>
 
-<tr class='errorClass warning'>
+<tr class='passClass warning'>
     <td>Test_aionwfwj.Test_aionwfwj</td>
-    <td class="text-center">1</td>
+    <td class="text-center">3</td>
+    <td class="text-center">3</td>
     <td class="text-center">0</td>
     <td class="text-center">0</td>
-    <td class="text-center">1</td>
-    <td class="text-center"><a href="javascript:showClassDetail('c1',1)" class="detail" id='c1'>Detail</a></td>
+    <td class="text-center"><a href="javascript:showClassDetail('c1',3)" class="detail" id='c1'>Detail</a></td>
 </tr>
 
-<tr id='ft1_1' class='none'>
-    <td class='errorCase'><div class='testcase'>test_1_wwfwjsqzm: 登录田杰起草无违法违纪证明</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_ft1_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft1_1'>error</button>
-    <div id='div_ft1_1' class="collapse">  -->
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_ft1_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft1_1'>error</button>
-    <div id='div_ft1_1' class="collapse in">
-    <pre>
-    
-ft1_1: Traceback (most recent call last):
-  File "F:\CODE\Auto_Test_Framework\TestCase\UICase\Test_aionwfwj.py", line 19, in setUp
-    self.driver = driver.openbrowser(self)
-  File "F:\CODE\Auto_Test_Framework\Base\BrowserDriver.py", line 49, in openbrowser
-    driver.maximize_window()
-  File "C:\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 737, in maximize_window
-    self.execute(command, params)
-  File "C:\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
-    self.error_handler.check_response(response)
-  File "C:\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.NoSuchWindowException: Message: Browsing context has been discarded
+<tr id='pt1_1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_1_wwfwjsqzm: 登录田杰起草无违法违纪证明</div></td>
+    <td colspan='5' align='center'><span class="label label-success success">pass</span></td>
+</tr>
 
+<tr id='pt1_2' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_2_wwfwjsqzm: 登录tianj并查找待办,并且提交待办</div></td>
+    <td colspan='5' align='center'><span class="label label-success success">pass</span></td>
+</tr>
 
-
-    </pre>
-    </div>
-    </td>
+<tr id='pt1_3' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_3_wwfwjsqzm: 登录孙步昇查找待办,填写意见后，提交待办</div></td>
+    <td colspan='5' align='center'><span class="label label-success success">pass</span></td>
 </tr>
 
 <tr id='total_row' class="text-center active">
     <td>Total</td>
-    <td>1</td>
+    <td>3</td>
+    <td>3</td>
     <td>0</td>
     <td>0</td>
-    <td>1</td>
-    <td>Passing rate: 0.00%</td>
+    <td>Passing rate: 100.00%</td>
 </tr>
 </table>
 

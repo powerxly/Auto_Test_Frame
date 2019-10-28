@@ -30,5 +30,3 @@ orc_url = 'https://aip.baidubce.com/rest/2.0/ocr/v1/general_basic?access_token={
 data = {"url": img_url}
 res = requests.post(url=orc_url, data=data)
 print(json.dumps(res.json(), indent=2, ensure_ascii=False)) # 格式化输出
-
-24.73ffe76471d663f4ef42cdbe7dcaf8b0.2592000.1574758053.282335-11767296

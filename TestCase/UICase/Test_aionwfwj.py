@@ -14,10 +14,12 @@ class Test_aionwfwj(unittest.TestCase):
     sys.path.append("F:\\CODE\\Auto_Test_Framework")
     global current_timestamp
     current_timestamp = str(int(time.time()))
+
     def setUp(self):
         driver = BrowserDriver(self)
         self.driver = driver.openbrowser(self)
         openresult = 0
+        time.sleep(10)
 
     def test_1_wwfwjsqzm(self):
         """登录田杰起草无违法违纪证明
@@ -102,9 +104,13 @@ class Test_aionwfwj(unittest.TestCase):
         dk.click(['xpath', '/html/body/div[3]/form/div[1]/div/div[3]/div[1]/ul/li[1]/i'])
         dk.js_execute('$(".confimBtn button:eq(0)").click()')
         time.sleep(20)
+
+    def test_3_wwfwjsqzm(self):
+        """登录孙步昇查找待办,填写意见后，提交待办
+
+        :return:
         """
-        登录sunbusheng查找待办,填写意见后，提交待办
-        """
+        dk = dkPage(self.driver)
         dk.input_office_username('sunbusheng')
         dk.input_office_password('cetcwe123!')
         dk.click_office_btn()
@@ -113,7 +119,7 @@ class Test_aionwfwj(unittest.TestCase):
         dk.change_to_window(1)
         dk.send_key(['css selector', '#search_div_active > input'], "测试" + current_timestamp)
         dk.click(['css selector', '#searchButton_active'])
-        # temptitle = "测试" + current_timestamp
+        temptitle = "测试" + current_timestamp
         time.sleep(8)
         dk.click(['css selector', '[title=' + temptitle + ''])
         #dk.click(['css selector', '[title=' + temptitle + ''])
@@ -121,7 +127,7 @@ class Test_aionwfwj(unittest.TestCase):
         dk.change_to_window(2)
         time.sleep(5)
         title1 = self.driver.find_element_by_id("docTitle").get_attribute("value")
-        self.assertEqual(title1, "temptitle")
+        self.assertEqual(title1, temptitle)
         dk.send_key(['css selector', '#jjjczyj\$_opinion_popup_content'], "同意，请继续流转")
         dk.click(['css selector', '#control2_view > button:nth-child(4)'])
 
@@ -133,7 +139,7 @@ class Test_aionwfwj(unittest.TestCase):
 
 
     def tearDown(self):
-        self.driver.close()
+        self.driver.quit()
 
 
 if __name__ == "__main__":

@@ -5,8 +5,8 @@ brwserType:
 
 testUrl:
   #URL : http://192.168.63.146:18080/webapp/
-  URL : http://192.168.63.133:18080/webapp
-  #URL : http://10.254.0.80:18080/webapp
+  #URL : http://192.168.63.133:18080/webapp
+  URL : http://10.254.0.80:18080/webapp
 
 testUrlMobile:
   URL : http://10.2.87.115:8089/www/#/login
