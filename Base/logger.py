@@ -20,7 +20,8 @@ class Logger(object):
 
         #创建一个handle，用来写入日志文件
         now = time.strftime("%Y-%m-%d_%H_%M_%S_")
-        log_path = os.path.dirname(os.path.abspath('.'))+'/logs/'
+        #log_path = os.path.dirname(os.path.abspath('.'))+'/logs/'
+        log_path = os.path.dirname(os.path.dirname(os.getcwd()))+'/logs/'
         log_name = log_path+now+'.log'
 
         filehandle = logging.FileHandler(log_name,encoding="utf-8")

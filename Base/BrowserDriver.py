@@ -22,9 +22,11 @@ class BrowserDriver(object):
     def openbrowser(self,driver):
         #读取配置文件
         file_path = os.path.dirname(os.getcwd())
-        name_path = file_path + '\yaml\\browser.yaml'
+        # 获取父级目录
+        parent_path = os.path.dirname(file_path)
+        name_path = parent_path + '\yaml\\browser.yaml'
         with open(name_path, 'r',encoding='UTF-8') as f:
-            temp = yaml.load(f.read())
+            temp = yaml.load(f.read(),Loader=yaml.FullLoader)
         # 获取配置文件属性
         brow = temp['brwserType']['browserName']
         browser = brow

@@ -114,4 +114,9 @@ Runner = HTMLTestRunner(
 #### 测试报告
 ![自动化测试报告](https://upload-images.jianshu.io/upload_images/3404835-b27828973a200528.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
+#### 其他注意事项
+```
+   在CMD powershell中运行，首先切换到\\Auto_Test_Framework\\TestCase目录，然后
+执行python XXXX\Test_XXXX.py
 
+```

@@ -12,7 +12,7 @@ from report.Runner.HTMLTestRunner3 import HTMLTestRunner
 
 def create_suite():
     TestSuite = unittest.TestSuite()  # 测试集
-    test_dir = os.path.dirname(os.getcwd()) + '\\TestCase\\'
+    test_dir = os.path.dirname(os.getcwd()) + '\\UICase\\'
     # print(test_dir)
 
     discover = unittest.defaultTestLoader.discover(
@@ -28,12 +28,14 @@ def create_suite():
 
 def report():
     if len(sys.argv) > 1:
-        report_name = os.path.dirname(os.getcwd()) + '\\report\\' + sys.argv[1] + '_result.html'
+        report_name = os.path.dirname(os.getcwd()) + '\\UICase\\report\\' + sys.argv[1] + '_result.html'
+        #parent_path = os.path.dirname(os.path.dirname(os.getcwd()))
     else:
         now = time.strftime("%Y-%m-%d_%H_%M_%S_")
         # 需要查看每段时间的测试报告，可以这样写：
         # report_name = os.getcwd() + '\\report\\'+now+'result.html'
-        report_name = os.path.dirname(os.getcwd()) + '\\report\\result.html'
+        #report_name = os.path.dirname(os.getcwd()) + '\\UICase\\report\\result.html'
+        report_name = os.path.dirname(os.path.dirname(os.getcwd())) + '\\report\\UIAutoTest_result.html'
     return report_name
 
 if __name__ == '__main__':
