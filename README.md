@@ -116,7 +116,5 @@ Runner = HTMLTestRunner(
 
 #### 其他注意事项
 ```
-   在CMD powershell中运行，首先切换到\\Auto_Test_Framework\\TestCase目录，然后
-执行python XXXX\Test_XXXX.py
-
+   运行报错找不到某某文件路径，请自行修改BrowserDriver.py以及logger.py
 ```

@@ -71,61 +71,61 @@ class Test_aionwfwj(unittest.TestCase):
         #self.driver.execute_script('$(".confimBtn button:eq(0)").click()')
         time.sleep(2)
 
-    # def test_2_wwfwjsqzm(self):
-    #     #dk.click(['xpath','/html/body/div[5]/div/div[1]/div[3]/button[1]'])
-    #     """登录tianj并查找待办,并且提交待办
-    #
-    #     :return:
-    #     """
-    #     dk = dkPage(self.driver)
-    #     dk.input_office_username('tianj')
-    #     dk.input_office_password('cetcwe123!')
-    #     dk.click_office_btn()
-    #     time.sleep(15)
-    #     dk.click(['css selector',"#todo-section > a.more"])
-    #     dk.change_to_window(1)
-    #     dk.send_key(['css selector','#search_div_active > input'],"测试" + current_timestamp)
-    #     dk.click(['css selector','#searchButton_active'])
-    #     temptitle = "测试" + current_timestamp
-    #     dk.click(['css selector','[title='+temptitle+''])
-    #     #self.driver.execute_script('''$([])''')
-    #     dk.change_to_window(2)
-    #     time.sleep(15)
-    #     title = self.driver.find_element_by_css_selector("#docTitle").get_attribute("value")
-    #     self.assertEqual(title, temptitle)
-    #     dk.click(['css selector','#control2_view > button:nth-child(4)'])
-    #     dk.get_screent_img()
-    #     time.sleep(15)
-    #     dk.change_to_window(1)
-    #     dk.close()
-    #     dk.change_to_window(0)
-    #     dk.click(['xpath', '/html/body/div[3]/form/div[1]/div/div[3]/div[1]/ul/li[1]/i'])
-    #     dk.js_execute('$(".confimBtn button:eq(0)").click()')
-    #     time.sleep(20)
-    #     """
-    #     登录sunbusheng查找待办,填写意见后，提交待办
-    #     """
-    #     dk.input_office_username('sunbusheng')
-    #     dk.input_office_password('cetcwe123!')
-    #     dk.click_office_btn()
-    #     time.sleep(8)
-    #     dk.click(['css selector', "#waitDo > a"])
-    #     dk.change_to_window(1)
-    #     dk.send_key(['css selector', '#search_div_active > input'], "测试" + current_timestamp)
-    #     dk.click(['css selector', '#searchButton_active'])
-    #     # temptitle = "测试" + current_timestamp
-    #     time.sleep(8)
-    #     dk.click(['css selector', '[title=' + temptitle + ''])
-    #     #dk.click(['css selector', '[title=' + temptitle + ''])
-    #     # self.driver.execute_script('''$([])''')
-    #     dk.change_to_window(2)
-    #     time.sleep(5)
-    #     title1 = self.driver.find_element_by_id("docTitle").get_attribute("value")
-    #     self.assertEqual(title1, "temptitle")
-    #     dk.send_key(['css selector', '#jjjczyj\$_opinion_popup_content'], "同意，请继续流转")
-    #     dk.click(['css selector', '#control2_view > button:nth-child(4)'])
-    #
-    #     time.sleep(15)
+    def test_2_wwfwjsqzm(self):
+        #dk.click(['xpath','/html/body/div[5]/div/div[1]/div[3]/button[1]'])
+        """登录tianj并查找待办,并且提交待办
+
+        :return:
+        """
+        dk = dkPage(self.driver)
+        dk.input_office_username('tianj')
+        dk.input_office_password('cetcwe123!')
+        dk.click_office_btn()
+        time.sleep(15)
+        dk.click(['css selector',"#todo-section > a.more"])
+        dk.change_to_window(1)
+        dk.send_key(['css selector','#search_div_active > input'],"测试" + current_timestamp)
+        dk.click(['css selector','#searchButton_active'])
+        temptitle = "测试" + current_timestamp
+        dk.click(['css selector','[title='+temptitle+''])
+        #self.driver.execute_script('''$([])''')
+        dk.change_to_window(2)
+        time.sleep(15)
+        title = self.driver.find_element_by_css_selector("#docTitle").get_attribute("value")
+        self.assertEqual(title, temptitle)
+        dk.click(['css selector','#control2_view > button:nth-child(4)'])
+        dk.get_screent_img()
+        time.sleep(15)
+        dk.change_to_window(1)
+        dk.close()
+        dk.change_to_window(0)
+        dk.click(['xpath', '/html/body/div[3]/form/div[1]/div/div[3]/div[1]/ul/li[1]/i'])
+        dk.js_execute('$(".confimBtn button:eq(0)").click()')
+        time.sleep(20)
+        """
+        登录sunbusheng查找待办,填写意见后，提交待办
+        """
+        dk.input_office_username('sunbusheng')
+        dk.input_office_password('cetcwe123!')
+        dk.click_office_btn()
+        time.sleep(8)
+        dk.click(['css selector', "#waitDo > a"])
+        dk.change_to_window(1)
+        dk.send_key(['css selector', '#search_div_active > input'], "测试" + current_timestamp)
+        dk.click(['css selector', '#searchButton_active'])
+        # temptitle = "测试" + current_timestamp
+        time.sleep(8)
+        dk.click(['css selector', '[title=' + temptitle + ''])
+        #dk.click(['css selector', '[title=' + temptitle + ''])
+        # self.driver.execute_script('''$([])''')
+        dk.change_to_window(2)
+        time.sleep(5)
+        title1 = self.driver.find_element_by_id("docTitle").get_attribute("value")
+        self.assertEqual(title1, "temptitle")
+        dk.send_key(['css selector', '#jjjczyj\$_opinion_popup_content'], "同意，请继续流转")
+        dk.click(['css selector', '#control2_view > button:nth-child(4)'])
+
+        time.sleep(15)
 
 
 
