@@ -9,7 +9,7 @@ testUrl:
   URL : http://10.254.0.80:18080/webapp
 
 testUrlMobile:
-  URL : http://10.2.87.115:8089/www/#/login
+  URL : http://10.254.0.80:18080/webapp
   #URL : http://10.2.86.242:8089/www/#/login
 
 jcyj:

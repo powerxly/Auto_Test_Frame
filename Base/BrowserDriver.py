@@ -12,7 +12,7 @@ import yaml
 logger = Logger(logger="BrowserDriver").getlog()
 
 class BrowserDriver(object):
-    path = os.path.dirname(os.path.abspath('.'))#这是获取相对路径的方法
+    path = os.path.dirname(os.path.dirname(os.path.abspath('.')))#这是获取相对路径的方法
     chrome_driver_path = path + '/driver/chromedriver.exe'
     ie_driver_path = path + '/driver/IEDriverServer.exe'
 
@@ -53,11 +53,17 @@ class BrowserDriver(object):
         return driver
 
     def openbrowsemobile(self,driver):
+        '''
+        最新版本chrome该方法不可用！！！
+        最新版本chrome该方法不可用！！！
+        最新版本chrome该方法不可用！！！
+        '''
         #读取配置文件
         file_path = os.path.dirname(os.getcwd())
-        name_path = file_path + '\yaml\\browser.yaml'
+        parent_path = os.path.dirname(file_path)
+        name_path = parent_path + '\yaml\\browser.yaml'
         with open(name_path, 'r') as f:
-            temp = yaml.load(f.read())
+            temp = yaml.load(f.read(),Loader=yaml.FullLoader)
         # 获取配置文件属性
         brow = temp['brwserType']['browserName']
         browser = brow
@@ -90,3 +96,32 @@ class BrowserDriver(object):
         logger.info("关闭浏览器")
         self.driver.quit()
 
+    def upload_file(self):
+        file_path = os.path.dirname(os.getcwd())
+        # 获取父级目录
+        parent_path = os.path.dirname(file_path)
+        name_path = parent_path + '\yaml\\browser.yaml'
+        with open(name_path, 'r', encoding='UTF-8') as f:
+            temp = yaml.load(f.read(), Loader=yaml.FullLoader)
+        # 获取配置文件属性
+        brow = temp['brwserType']['browserName']
+        browser = brow
+        logger.info("选择的浏览器为: %s 浏览器" % browser)
+        ur = temp['testUrl']['URL']
+        url = ur
+        logger.info("打开的URL为: %s" % url)
+        if browser == "Firefox":
+            print("开始上传文件")
+            os.chdir("F:\CODE\Auto_Test_Framework\\fileupload")
+            os.system("firefox_uploadfile.exe")
+            print("文件上传完成")
+        elif browser == "Chrome":
+            print("开始上传文件")
+            os.chdir("F:\CODE\Auto_Test_Framework\\fileupload")
+            os.system("chrome_uploadfile.exe")
+            print("文件上传完成")
+        elif browser == "IE":
+            print("开始上传文件")
+            os.chdir("F:\CODE\Auto_Test_Framework\\fileupload")
+            os.system("ie_uploadfile.exe")
+            print("文件上传完成")
