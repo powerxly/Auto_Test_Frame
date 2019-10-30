@@ -7,7 +7,7 @@ import os
 import sys
 import time
 import unittest
-
+sys.path.append("F:\\CODE\\Auto_Test_Framework")
 from report.Runner.HTMLTestRunner3 import HTMLTestRunner
 
 def create_suite():

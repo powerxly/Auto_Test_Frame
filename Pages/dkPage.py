@@ -4,7 +4,7 @@
 
 from selenium.webdriver.common.by import By
 from Base.Selenium2 import BasePage
-
+import os
 class dkPage(BasePage):
     """
     在这里写定位器，通过元素属性定位元素对象
@@ -13,15 +13,20 @@ class dkPage(BasePage):
     userName = (By.CSS_SELECTOR,'#emailId')#定位用户名输入框
     passWord = (By.CSS_SELECTOR,'#password')#定位密码输入框
     loginButton = (By.CSS_SELECTOR,'#login-btn')  # 定位登录按钮
-    OA_LINK = (By.CSS_SELECTOR,'#oa_link') #定位個人工作臺
-
-
-    ###移动端元素###
-
-    userList = {"wanghuan": "123456",
-                "lush": "123456"
-                }
-
+    jtxsdwdwcjxtbab_sxbt = (By.CSS_SELECTOR,'#docTitle')
+    jtxsdwdwcjxtbab_badwbm = (By.CSS_SELECTOR,'#recordsDept')
+    jtxsdwdwcjxtbab_babh = (By.CSS_SELECTOR,'#recordsNumber')
+    jtxsdwdwcjxtbab_lxr = (By.CSS_SELECTOR,'#contact')
+    jtxsdwdwcjxtbab_lxdh = (By.CSS_SELECTOR,'#phone')
+    jtxsdwdwcjxtbab_yyxtmc = (By.CSS_SELECTOR,'#appName')
+    jtxsdwdwcjxtbab_xtjsf = (By.CSS_SELECTOR,'#systemBuild')
+    jtxsdwdwcjxtbab_xtym = (By.CSS_SELECTOR,'#domain')
+    jtxsdwdwcjxtbab_ip = (By.CSS_SELECTOR,'#ipAddress')
+    jtxsdwdwcjxtbab_sxsj = (By.CSS_SELECTOR,'#startUpTime_picker')
+    jtxsdwdwcjxtbab_bsfs = (By.CSS_SELECTOR,'#deploymentMode')
+    jtxsdwdwcjxtbab_bswzwlqy = (By.CSS_SELECTOR,'#netRegion')
+    jtxsdwdwcjxtbab_xtjj = (By.CSS_SELECTOR,'#intro')
+    jtxsdwdwcjxtbab_bz =  (By.CSS_SELECTOR,'#remarks')
 
     def input_office_username(self,text):
         self.send_key(self.userName,text)

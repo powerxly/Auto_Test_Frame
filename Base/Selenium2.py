@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 # @Author  : Vant
 # @Email   : 944921374@qq.com
+# @update  : 洋燚
 
 from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
@@ -13,7 +14,6 @@ from selenium import webdriver
 import os.path
 from .logger import Logger
 import time
-
 #create a logger instance
 logger = Logger(logger='BasePage').getlog()
 
@@ -272,6 +272,8 @@ class BasePage(object):
     def change_to_window(self,loc):
         '''选择进入窗口，0，5，4，3，2，1,1永远为最后的窗口'''
         self.driver.switch_to.window(self.driver.window_handles[loc])
+
+
 
 
 
