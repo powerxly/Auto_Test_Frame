@@ -27,7 +27,7 @@ class dkPage(BasePage):
     jtxsdwdwcjxtbab_bswzwlqy = (By.CSS_SELECTOR,'#netRegion')
     jtxsdwdwcjxtbab_xtjj = (By.CSS_SELECTOR,'#intro')
     jtxsdwdwcjxtbab_bz =  (By.CSS_SELECTOR,'#remarks')
-
+    jtxsdwdwcjxtbab_tj = (By.XPATH,'#noFlowSaveAndClose > button.btn.btn-success')
     def input_office_username(self,text):
         self.send_key(self.userName,text)
 

@@ -61,16 +61,16 @@ class Test_aionwfwj(unittest.TestCase):
         dk.send_key(['css selector', '#reasonApplication'], "原因" + current_timestamp)
         dk.send_key(['css selector', '#remarks'], "备注" + current_timestamp)
         time.sleep(1)
-        dk.click(['css selector','#noFlowSaveAndClose > button.btn.btn-success'])
+        dk.click(['css selector', '#control2_view > button:nth-child(4)'])
         #alter = self.driver.switch_to_alert()
         #alter.accept()
         time.sleep(15)
         #退出当前登录用户
-        dk.change_to_window(1)
-        dk.close()
-        dk.change_to_window(0)
-        dk.click(['xpath','/html/body/div[3]/form/div[1]/div/div[3]/div[1]/ul/li[1]/i'])
-        dk.js_execute('$(".confimBtn button:eq(0)").click()')
+        # dk.change_to_window(1)
+        # dk.close()
+        # dk.change_to_window(0)
+        # dk.click(['xpath','/html/body/div[3]/form/div[1]/div/div[3]/div[1]/ul/li[1]/i'])
+        # dk.js_execute('$(".confimBtn button:eq(0)").click()')
         #self.driver.execute_script('$(".confimBtn button:eq(0)").click()')
         time.sleep(2)
 
@@ -103,7 +103,7 @@ class Test_aionwfwj(unittest.TestCase):
         dk.close()
         dk.change_to_window(0)
         dk.click(['xpath', '/html/body/div[3]/form/div[1]/div/div[3]/div[1]/ul/li[1]/i'])
-        dk.js_execute('$(".confimBtn button:eq(0)").click()')
+        dk.click(['css selector', '#control2_view > button:nth-child(4)'])
         time.sleep(20)
 
     def test_3_wwfwjsqzm(self):

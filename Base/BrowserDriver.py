@@ -8,6 +8,7 @@ import os.path
 from selenium import webdriver
 from Base.logger import Logger
 import yaml
+import time
 
 logger = Logger(logger="BrowserDriver").getlog()
 
@@ -20,11 +21,12 @@ class BrowserDriver(object):
         self.driver = driver
 
     def openbrowser(self,driver):
-        #读取配置文件
-        file_path = os.path.dirname(os.getcwd())
+        #读取配置文件"F:\\CODE\\Auto_Test_Framework\\yaml\\browser.yaml"
+        #file_path = os.path.dirname(os.path.dirname(os.getcwd()))
+
         # 获取父级目录
-        parent_path = os.path.dirname(file_path)
-        name_path = parent_path + '\yaml\\browser.yaml'
+        #parent_path = os.path.dirname(file_path)
+        name_path = "F:\\CODE\\Auto_Test_Framework\\yaml\\browser.yaml"
         with open(name_path, 'r',encoding='UTF-8') as f:
             temp = yaml.load(f.read(),Loader=yaml.FullLoader)
         # 获取配置文件属性
@@ -43,8 +45,7 @@ class BrowserDriver(object):
         elif browser == "IE":
             driver = webdriver.Ie(self.ie_driver_path)
             logger.info("启动IE浏览器")
-
-        driver.get(url)
+        driver.get(ur)
         logger.info("打开URL: %s" % url)
         driver.maximize_window()
         logger.info("全屏当前窗口")

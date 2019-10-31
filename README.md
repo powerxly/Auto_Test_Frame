@@ -3,8 +3,8 @@
 ---
 #### 关于框架：
 重要声明：Vantpy1.0原作者Vant 944921374@qq.com
-Vantpy框架基于Selenium+Yaml+Unittest搭建的WebUI自动化测试框架
-持续更新by jasonleeyag@163.com
+Vantpy框架基于Selenium+Yaml+Unittest搭建的WebUI自动化测试框架\
+持续更新By jasonleeyag@163.com
 
 #### 特点：
 - 使用POM（页面对象模式）设计，使代码更加有逻辑性，测试脚本更加规范，后期更加容易维护以及复用性更高

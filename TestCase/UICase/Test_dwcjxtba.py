@@ -37,6 +37,7 @@ class Test_dwcjxtba(unittest.TestCase):
         time.sleep(5)
         # 切换到一网通办首页
         dk.change_to_window(1)
+        dk.get_screent_img()
         # 点击事项列表
         dk.click(['css selector', '#itemsList'])
         # 等待页面加载
@@ -73,9 +74,35 @@ class Test_dwcjxtba(unittest.TestCase):
         #上传附件
         op_file = BrowserDriver(self)
         op_file.upload_file()
+        time.sleep(3)
+        self.driver.quit()
+        time.sleep(20)
+
+    def test_2_dwcjxtba(self):
+        """登录盖建军处理待办
+
+        :return:
+        """
+        dk = dkPage(self.driver)
+        dk.input_office_username('gaijianjun1')
+        dk.input_office_password('cetcwe123!')
+        dk.click_office_btn()
+        time.sleep(15)
+        dk.click(['css selector', "#todo-section > a.more"])
+        dk.change_to_window(1)
+        dk.send_key(['css selector', '#search_div_active > input'], "标题" + current_timestamp)
+        dk.click(['css selector', '#searchButton_active'])
+        temptitle = "标题" + current_timestamp
+        dk.click(['css selector', '[title=' + temptitle + ''])
+        # self.driver.execute_script('''$([])''')
+        dk.change_to_window(2)
+        time.sleep(15)
+        title = self.driver.find_element_by_css_selector("#docTitle").get_attribute("value")
+        self.assertEqual(title, temptitle)
+        dk.click(['css selector', '#control2_view > button:nth-child(4)'])
+        time.sleep(40)
 
 
-        time.sleep(100)
     def tearDown(self):
         self.driver.quit()
 
