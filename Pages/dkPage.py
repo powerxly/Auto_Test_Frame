@@ -28,6 +28,21 @@ class dkPage(BasePage):
     jtxsdwdwcjxtbab_xtjj = (By.CSS_SELECTOR,'#intro')
     jtxsdwdwcjxtbab_bz =  (By.CSS_SELECTOR,'#remarks')
     jtxsdwdwcjxtbab_tj = (By.XPATH,'#noFlowSaveAndClose > button.btn.btn-success')
+    #成员单位运维问题申请单
+    cydwywwtsqd_bt = (By.CSS_SELECTOR,'#docTitle')
+    cydwywwtsqd_sqr = (By.CSS_SELECTOR,'#creatorName')
+    cydwywwtsqd_lxdh = (By.CSS_SELECTOR,'#phone')
+    #应用系统上线申请单
+    yyxtsxsqd_bt = (By.CSS_SELECTOR,'#docTitle')
+    yyxtsxsqd_xtmc = (By.CSS_SELECTOR,'#systemName')
+    yyxtsxsqd_sqr = (By.CSS_SELECTOR,'#creatorName')
+    yyxtsxsqd_sxbb = (By.CSS_SELECTOR,'#onlineVersion')
+    yyxtsxsqd_sxnr = (By.CSS_SELECTOR,'#onlineContent')
+    yyxtsxsqd_sxyx = (By.CSS_SELECTOR,'#onlineAffect2')
+    yyxtsxsqd_bz = (By.CSS_SELECTOR,'#remark')
+
+
+
     def input_office_username(self,text):
         self.send_key(self.userName,text)
 

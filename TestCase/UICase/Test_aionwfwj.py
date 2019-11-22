@@ -90,7 +90,7 @@ class Test_aionwfwj(unittest.TestCase):
         dk.send_key(['css selector','#search_div_active > input'],"测试" + current_timestamp)
         dk.click(['css selector','#searchButton_active'])
         temptitle = "测试" + current_timestamp
-        dk.click(['css selector','[title='+temptitle+''])
+        dk.click(['css selector', "[title=" + temptitle + "]"])
         #self.driver.execute_script('''$([])''')
         dk.change_to_window(2)
         time.sleep(15)
@@ -98,12 +98,12 @@ class Test_aionwfwj(unittest.TestCase):
         self.assertEqual(title, temptitle)
         dk.click(['css selector','#control2_view > button:nth-child(4)'])
         dk.get_screent_img()
-        time.sleep(15)
-        dk.change_to_window(1)
-        dk.close()
-        dk.change_to_window(0)
-        dk.click(['xpath', '/html/body/div[3]/form/div[1]/div/div[3]/div[1]/ul/li[1]/i'])
-        dk.click(['css selector', '#control2_view > button:nth-child(4)'])
+        # time.sleep(15)
+        # dk.change_to_window(1)
+        # dk.close()
+        # dk.change_to_window(0)
+        # dk.click(['xpath', '/html/body/div[3]/form/div[1]/div/div[3]/div[1]/ul/li[1]/i'])
+        # dk.click(['css selector', '#control2_view > button:nth-child(4)'])
         time.sleep(20)
 
     def test_3_wwfwjsqzm(self):
@@ -122,9 +122,10 @@ class Test_aionwfwj(unittest.TestCase):
         dk.click(['css selector', '#searchButton_active'])
         temptitle = "测试" + current_timestamp
         time.sleep(8)
-        dk.click(['css selector', '[title=' + temptitle + ''])
+        dk.click(['css selector', "[title=" + temptitle + "]"])
         #dk.click(['css selector', '[title=' + temptitle + ''])
         # self.driver.execute_script('''$([])''')
+        time.sleep(15)
         dk.change_to_window(2)
         time.sleep(5)
         title1 = self.driver.find_element_by_id("docTitle").get_attribute("value")
@@ -150,7 +151,7 @@ class Test_aionwfwj(unittest.TestCase):
         dk.click(['css selector', '#searchButton_active'])
         temptitle = "测试" + current_timestamp
         time.sleep(8)
-        dk.click(['css selector', '[title=' + temptitle + ''])
+        dk.click(['css selector', "[title=" + temptitle + "]"])
         #dk.click(['css selector', '[title=' + temptitle + ''])
         # self.driver.execute_script('''$([])''')
         dk.change_to_window(2)
@@ -178,7 +179,7 @@ class Test_aionwfwj(unittest.TestCase):
         dk.click(['css selector', '#searchButton_active'])
         temptitle = "测试" + current_timestamp
         time.sleep(8)
-        dk.click(['css selector', '[title=' + temptitle + ''])
+        dk.click(['css selector', "[title=" + temptitle + "]"])
         #dk.click(['css selector', '[title=' + temptitle + ''])
         # self.driver.execute_script('''$([])''')
         dk.change_to_window(2)
@@ -190,33 +191,33 @@ class Test_aionwfwj(unittest.TestCase):
 
         time.sleep(15)
 
-    def test_6_wwfwjsqzm(self):
-        """登录起草人田杰发起预约
-
-        :return:
-        """
-        dk = dkPage(self.driver)
-        dk.input_office_username('tianjie')
-        dk.input_office_password('cetcwe123!')
-        dk.click_office_btn()
-        time.sleep(8)
-        dk.click(['css selector', "#todo-section > a.more"])
-        dk.change_to_window(1)
-        dk.send_key(['css selector', '#search_div_active > input'], "测试" + current_timestamp)
-        dk.click(['css selector', '#searchButton_active'])
-        temptitle = "测试" + current_timestamp
-        time.sleep(8)
-        dk.click(['css selector', '[title=' + temptitle + ''])
-        #dk.click(['css selector', '[title=' + temptitle + ''])
-        # self.driver.execute_script('''$([])''')
-        dk.change_to_window(2)
-        time.sleep(5)
-        title1 = self.driver.find_element_by_id("docTitle").get_attribute("value")
-        self.assertEqual(title1, temptitle)
-        dk.send_key(['css selector', '#fsbshyj\$_opinion_popup_content'], "同意，请继续流转,我是王君凤")
-        dk.click(['css selector', '#control2_view > button:nth-child(4)'])
-
-        time.sleep(15)
+    # def test_6_wwfwjsqzm(self):
+    #     """登录起草人田杰发起预约
+    #
+    #     :return:
+    #     """
+    #     dk = dkPage(self.driver)
+    #     dk.input_office_username('tianjie')
+    #     dk.input_office_password('cetcwe123!')
+    #     dk.click_office_btn()
+    #     time.sleep(8)
+    #     dk.click(['css selector', "#todo-section > a.more"])
+    #     dk.change_to_window(1)
+    #     dk.send_key(['css selector', '#search_div_active > input'], "测试" + current_timestamp)
+    #     dk.click(['css selector', '#searchButton_active'])
+    #     temptitle = "测试" + current_timestamp
+    #     time.sleep(8)
+    #     dk.click(['css selector', '[title=' + temptitle + ']'])
+    #     #dk.click(['css selector', '[title=' + temptitle + ''])
+    #     # self.driver.execute_script('''$([])''')
+    #     dk.change_to_window(2)
+    #     time.sleep(5)
+    #     title1 = self.driver.find_element_by_id("docTitle").get_attribute("value")
+    #     self.assertEqual(title1, temptitle)
+    #     dk.send_key(['css selector', '#fsbshyj\$_opinion_popup_content'], "同意，请继续流转,我是王君凤")
+    #     dk.click(['css selector', '#control2_view > button:nth-child(4)'])
+    #
+    #     time.sleep(15)
 
 
 
