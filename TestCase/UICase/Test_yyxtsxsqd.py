@@ -47,7 +47,6 @@ class Test_yyxtsxsqd(unittest.TestCase):
         dk.click(['css selector', '#itemsList'])
         # 等待页面加载
         time.sleep(1)
-        # 搜索事项，无违法违纪证明申请并点击事项名称
         dk.send_key(['css selector', '#searchForm_itemsList > div > input'], "WE应用系统上线申请单")
         dk.click(['css selector', '[title="WE应用系统上线申请单"]'])
         # 等待页面加载
@@ -87,7 +86,121 @@ class Test_yyxtsxsqd(unittest.TestCase):
 
         self.driver.quit()
 
+    def test_2_yyxtsxsqd(self):
+        """登录李媛填写意见并提交结束
 
+        :return:
+        """
+        dk = dkPage(self.driver)
+        dk.input_office_username('liyuan1')
+        dk.input_office_password('cetcwe123!')
+        dk.click_office_btn()
+        time.sleep(3)
+        dk.click(['css selector', "#todo-section > a.more"])
+        dk.change_to_window(1)
+        dk.send_key(['css selector', '#search_div_active > input'], "标题" + current_timestamp)
+        dk.click(['css selector', '#searchButton_active'])
+        temptitle = "标题" + current_timestamp
+        time.sleep(3)
+        dk.click(['css selector', "[title=" + temptitle + "]"])
+        # dk.click(['css selector', '[title=' + temptitle + ''])
+        # self.driver.execute_script('''$([])''')
+        dk.change_to_window(2)
+        time.sleep(3)
+        title1 = self.driver.find_element_by_id("docTitle").get_attribute("value")
+        self.assertEqual(title1, temptitle)
+        time.sleep(2)
+        dk.send_key(['css selector', '#fgldyj\$_opinion_popup_content'], "我是李媛，同意，请继续流转！")
+        #dk.js_execute('''$('#control2_view > div.workflowsubmit_content.workflowsubmit_content_executor > div > div > div.workflowsubmit_content_hxr > div > dd:nth-child(2)').click()''')
+        dk.click(['css selector', '#control2_view > button:nth-child(4)'])
+        time.sleep(5)
+
+    def test_3_yyxtsxsqd(self):
+        """登录许勇填写意见并提交结束
+
+        :return:
+        """
+        dk = dkPage(self.driver)
+        dk.input_office_username('xuyong')
+        dk.input_office_password('cetcwe123!')
+        dk.click_office_btn()
+        time.sleep(3)
+        dk.click(['css selector', "#todo-section > a.more"])
+        dk.change_to_window(1)
+        dk.send_key(['css selector', '#search_div_active > input'], "标题" + current_timestamp)
+        dk.click(['css selector', '#searchButton_active'])
+        temptitle = "标题" + current_timestamp
+        time.sleep(3)
+        dk.click(['css selector', "[title=" + temptitle + "]"])
+        # dk.click(['css selector', '[title=' + temptitle + ''])
+        # self.driver.execute_script('''$([])''')
+        dk.change_to_window(2)
+        time.sleep(3)
+        title1 = self.driver.find_element_by_id("docTitle").get_attribute("value")
+        self.assertEqual(title1, temptitle)
+        time.sleep(2)
+        dk.send_key(['css selector', '#jtldyj\$_opinion_popup_content'], "我是许勇，同意，请继续流转！")
+        #dk.js_execute('''$('#control2_view > div.workflowsubmit_content.workflowsubmit_content_executor > div > div > div.workflowsubmit_content_hxr > div > dd:nth-child(2)').click()''')
+        dk.click(['css selector', '#control2_view > button:nth-child(4)'])
+        time.sleep(5)
+
+    def test_4_yyxtsxsqd(self):
+        """登录杨军填写意见并提交结束
+
+        :return:
+        """
+        dk = dkPage(self.driver)
+        dk.input_office_username('yangjun10')
+        dk.input_office_password('cetcwe123!')
+        dk.click_office_btn()
+        time.sleep(3)
+        dk.click(['css selector', "#todo-section > a.more"])
+        dk.change_to_window(1)
+        dk.send_key(['css selector', '#search_div_active > input'], "标题" + current_timestamp)
+        dk.click(['css selector', '#searchButton_active'])
+        temptitle = "标题" + current_timestamp
+        time.sleep(3)
+        dk.click(['css selector', "[title=" + temptitle + "]"])
+        # dk.click(['css selector', '[title=' + temptitle + ''])
+        # self.driver.execute_script('''$([])''')
+        dk.change_to_window(2)
+        time.sleep(3)
+        title1 = self.driver.find_element_by_id("docTitle").get_attribute("value")
+        self.assertEqual(title1, temptitle)
+        time.sleep(2)
+        dk.send_key(['css selector', '#jtldyj\$_opinion_popup_content'], "我是杨军，同意，请继续流转！")
+        #dk.js_execute('''$('#control2_view > div.workflowsubmit_content.workflowsubmit_content_executor > div > div > div.workflowsubmit_content_hxr > div > dd:nth-child(2)').click()''')
+        dk.click(['css selector', '#control2_view > button:nth-child(4)'])
+        time.sleep(5)
+
+    def test_4_yyxtsxsqd(self):
+        """登录张帅帅填写意见并提交结束
+
+        :return:
+        """
+        dk = dkPage(self.driver)
+        dk.input_office_username('yangjun10')
+        dk.input_office_password('cetcwe123!')
+        dk.click_office_btn()
+        time.sleep(3)
+        dk.click(['css selector', "#todo-section > a.more"])
+        dk.change_to_window(1)
+        dk.send_key(['css selector', '#search_div_active > input'], "标题" + current_timestamp)
+        dk.click(['css selector', '#searchButton_active'])
+        temptitle = "标题" + current_timestamp
+        time.sleep(3)
+        dk.click(['css selector', "[title=" + temptitle + "]"])
+        # dk.click(['css selector', '[title=' + temptitle + ''])
+        # self.driver.execute_script('''$([])''')
+        dk.change_to_window(2)
+        time.sleep(3)
+        title1 = self.driver.find_element_by_id("docTitle").get_attribute("value")
+        self.assertEqual(title1, temptitle)
+        time.sleep(2)
+        dk.send_key(['css selector', '#jtldyj\$_opinion_popup_content'], "我是杨军，同意，请继续流转！")
+        #dk.js_execute('''$('#control2_view > div.workflowsubmit_content.workflowsubmit_content_executor > div > div > div.workflowsubmit_content_hxr > div > dd:nth-child(2)').click()''')
+        dk.click(['css selector', '#control2_view > button:nth-child(4)'])
+        time.sleep(5)
 
     def tearDown(self):
         self.driver.quit()
