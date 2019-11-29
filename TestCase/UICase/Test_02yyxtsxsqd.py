@@ -58,7 +58,7 @@ class Test_02yyxtsxsqd(unittest.TestCase):
         time.sleep(3)
         dk.change_to_window(2)
         # 填写表单
-        dk.send_key(dkPage.yyxtsxsqd_bt,"标题" + current_timestamp)
+        dk.send_key(dkPage.yyxtsxsqd_bt,"应用系统上线申请单" + current_timestamp)
         dk.send_key(dkPage.yyxtsxsqd_xtmc,"WE" + current_timestamp)
         dk.send_key(dkPage.yyxtsxsqd_sqr,"王良" + current_timestamp)
         dk.send_key(dkPage.yyxtsxsqd_sxbb,"Version" + current_timestamp)
@@ -87,8 +87,8 @@ class Test_02yyxtsxsqd(unittest.TestCase):
             dk.click(['css selector','#control2_view > button:nth-child(4)'])
         except Exception as e:
             print(e)
-        time.sleep(5)
-        super.case_status = False
+        time.sleep(8)
+
         self.driver.quit()
 
     def test_2_yyxtsxsqd(self):
@@ -104,9 +104,9 @@ class Test_02yyxtsxsqd(unittest.TestCase):
         time.sleep(3)
         dk.click(['css selector', "#todo-section > a.more"])
         dk.change_to_window(1)
-        dk.send_key(['css selector', '#search_div_active > input'], "标题" + current_timestamp)
+        dk.send_key(['css selector', '#search_div_active > input'], "应用系统上线申请单" + current_timestamp)
         dk.click(['css selector', '#searchButton_active'])
-        temptitle = "标题" + current_timestamp
+        temptitle = "应用系统上线申请单" + current_timestamp
         time.sleep(3)
         dk.click(['css selector', "[title=" + temptitle + "]"])
         # dk.click(['css selector', '[title=' + temptitle + ''])
@@ -119,7 +119,7 @@ class Test_02yyxtsxsqd(unittest.TestCase):
         dk.send_key(['css selector', '#fgldyj\$_opinion_popup_content'], "我是李媛，同意，请继续流转！")
         #dk.js_execute('''$('#control2_view > div.workflowsubmit_content.workflowsubmit_content_executor > div > div > div.workflowsubmit_content_hxr > div > dd:nth-child(2)').click()''')
         dk.click(['css selector', '#control2_view > button:nth-child(4)'])
-        time.sleep(5)
+        time.sleep(8)
 
     def test_3_yyxtsxsqd(self):
         """登录许勇填写意见并提交结束
@@ -133,9 +133,9 @@ class Test_02yyxtsxsqd(unittest.TestCase):
         time.sleep(3)
         dk.click(['css selector', "#todo-section > a.more"])
         dk.change_to_window(1)
-        dk.send_key(['css selector', '#search_div_active > input'], "标题" + current_timestamp)
+        dk.send_key(['css selector', '#search_div_active > input'], "应用系统上线申请单" + current_timestamp)
         dk.click(['css selector', '#searchButton_active'])
-        temptitle = "标题" + current_timestamp
+        temptitle = "应用系统上线申请单" + current_timestamp
         time.sleep(3)
         dk.click(['css selector', "[title=" + temptitle + "]"])
         # dk.click(['css selector', '[title=' + temptitle + ''])
@@ -148,7 +148,7 @@ class Test_02yyxtsxsqd(unittest.TestCase):
         dk.send_key(['css selector', '#jtldyj\$_opinion_popup_content'], "我是许勇，同意，请继续流转！")
         #dk.js_execute('''$('#control2_view > div.workflowsubmit_content.workflowsubmit_content_executor > div > div > div.workflowsubmit_content_hxr > div > dd:nth-child(2)').click()''')
         dk.click(['css selector', '#control2_view > button:nth-child(4)'])
-        time.sleep(5)
+        time.sleep(8)
 
     def test_4_yyxtsxsqd(self):
         """登录杨军填写意见并提交结束
@@ -162,9 +162,9 @@ class Test_02yyxtsxsqd(unittest.TestCase):
         time.sleep(3)
         dk.click(['css selector', "#todo-section > a.more"])
         dk.change_to_window(1)
-        dk.send_key(['css selector', '#search_div_active > input'], "标题" + current_timestamp)
+        dk.send_key(['css selector', '#search_div_active > input'], "应用系统上线申请单" + current_timestamp)
         dk.click(['css selector', '#searchButton_active'])
-        temptitle = "标题" + current_timestamp
+        temptitle = "应用系统上线申请单" + current_timestamp
         time.sleep(3)
         dk.click(['css selector', "[title=" + temptitle + "]"])
         # dk.click(['css selector', '[title=' + temptitle + ''])
@@ -177,7 +177,7 @@ class Test_02yyxtsxsqd(unittest.TestCase):
         dk.send_key(['css selector', '#jtldyj\$_opinion_popup_content'], "我是杨军，同意，请继续流转！")
         #dk.js_execute('''$('#control2_view > div.workflowsubmit_content.workflowsubmit_content_executor > div > div > div.workflowsubmit_content_hxr > div > dd:nth-child(2)').click()''')
         dk.click(['css selector', '#control2_view > button:nth-child(4)'])
-        time.sleep(5)
+        time.sleep(8)
 
     def test_5_yyxtsxsqd(self):
         """登录尚国平填写意见并提交结束
@@ -191,9 +191,9 @@ class Test_02yyxtsxsqd(unittest.TestCase):
         time.sleep(3)
         dk.click(['css selector', "#todo-section > a.more"])
         dk.change_to_window(1)
-        dk.send_key(['css selector', '#search_div_active > input'], "标题" + current_timestamp)
+        dk.send_key(['css selector', '#search_div_active > input'], "应用系统上线申请单" + current_timestamp)
         dk.click(['css selector', '#searchButton_active'])
-        temptitle = "标题" + current_timestamp
+        temptitle = "应用系统上线申请单" + current_timestamp
         time.sleep(3)
         dk.click(['css selector', "[title=" + temptitle + "]"])
         # dk.click(['css selector', '[title=' + temptitle + ''])
@@ -206,7 +206,7 @@ class Test_02yyxtsxsqd(unittest.TestCase):
         dk.send_key(['css selector', '#hjfzryj\$_opinion_popup_content'], "我是尚国平，流程结束！")
         #dk.js_execute('''$('#control2_view > div.workflowsubmit_content.workflowsubmit_content_executor > div > div > div.workflowsubmit_content_hxr > div > dd:nth-child(2)').click()''')
         dk.click(['css selector', '#control2_view > button:nth-child(4)'])
-        time.sleep(5)
+        time.sleep(8)
 
     def tearDown(self):
         self.driver.quit()

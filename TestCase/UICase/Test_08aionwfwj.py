@@ -55,7 +55,7 @@ class Test_08aionwfwj(unittest.TestCase):
         #切换到最右侧窗口
         dk.change_to_window(2)
         #填写表单
-        dk.send_key(['css selector','#docTitle'], "测试" + current_timestamp)
+        dk.send_key(['css selector','#docTitle'], "无违法违纪证明" + current_timestamp)
         dk.send_key(['css selector', '#legalRepresentative'], "法人" + current_timestamp)
         dk.send_key(['css selector', '#unitAddress'], "地址" + current_timestamp)
         dk.send_key(['css selector', '#reasonApplication'], "原因" + current_timestamp)
@@ -88,9 +88,9 @@ class Test_08aionwfwj(unittest.TestCase):
         time.sleep(15)
         dk.click(['css selector',"#todo-section > a.more"])
         dk.change_to_window(1)
-        dk.send_key(['css selector','#search_div_active > input'],"测试" + current_timestamp)
+        dk.send_key(['css selector','#search_div_active > input'],"无违法违纪证明" + current_timestamp)
         dk.click(['css selector','#searchButton_active'])
-        temptitle = "测试" + current_timestamp
+        temptitle = "无违法违纪证明" + current_timestamp
         dk.click(['css selector', "[title=" + temptitle + "]"])
         #self.driver.execute_script('''$([])''')
         dk.change_to_window(2)
@@ -120,9 +120,9 @@ class Test_08aionwfwj(unittest.TestCase):
         time.sleep(8)
         dk.click(['css selector', "#waitDo > a"])
         dk.change_to_window(1)
-        dk.send_key(['css selector', '#search_div_active > input'], "测试" + current_timestamp)
+        dk.send_key(['css selector', '#search_div_active > input'], "无违法违纪证明" + current_timestamp)
         dk.click(['css selector', '#searchButton_active'])
-        temptitle = "测试" + current_timestamp
+        temptitle = "无违法违纪证明" + current_timestamp
         time.sleep(8)
         dk.click(['css selector', "[title=" + temptitle + "]"])
         #dk.click(['css selector', '[title=' + temptitle + ''])
@@ -150,9 +150,9 @@ class Test_08aionwfwj(unittest.TestCase):
         time.sleep(8)
         dk.click(['css selector', "#waitDo > a"])
         dk.change_to_window(1)
-        dk.send_key(['css selector', '#search_div_active > input'], "测试" + current_timestamp)
+        dk.send_key(['css selector', '#search_div_active > input'], "无违法违纪证明" + current_timestamp)
         dk.click(['css selector', '#searchButton_active'])
-        temptitle = "测试" + current_timestamp
+        temptitle = "无违法违纪证明" + current_timestamp
         time.sleep(8)
         dk.click(['css selector', "[title=" + temptitle + "]"])
         #dk.click(['css selector', '[title=' + temptitle + ''])
@@ -180,9 +180,9 @@ class Test_08aionwfwj(unittest.TestCase):
         time.sleep(8)
         dk.click(['css selector', "#todo-section > a.more"])
         dk.change_to_window(1)
-        dk.send_key(['css selector', '#search_div_active > input'], "测试" + current_timestamp)
+        dk.send_key(['css selector', '#search_div_active > input'], "无违法违纪证明" + current_timestamp)
         dk.click(['css selector', '#searchButton_active'])
-        temptitle = "测试" + current_timestamp
+        temptitle = "无违法违纪证明" + current_timestamp
         time.sleep(8)
         dk.click(['css selector', "[title=" + temptitle + "]"])
         #dk.click(['css selector', '[title=' + temptitle + ''])
@@ -209,9 +209,9 @@ class Test_08aionwfwj(unittest.TestCase):
     #     time.sleep(8)
     #     dk.click(['css selector', "#todo-section > a.more"])
     #     dk.change_to_window(1)
-    #     dk.send_key(['css selector', '#search_div_active > input'], "测试" + current_timestamp)
+    #     dk.send_key(['css selector', '#search_div_active > input'], "无违法违纪证明" + current_timestamp)
     #     dk.click(['css selector', '#searchButton_active'])
-    #     temptitle = "测试" + current_timestamp
+    #     temptitle = "无违法违纪证明" + current_timestamp
     #     time.sleep(8)
     #     dk.click(['css selector', '[title=' + temptitle + ']'])
     #     #dk.click(['css selector', '[title=' + temptitle + ''])

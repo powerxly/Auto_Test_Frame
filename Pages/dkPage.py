@@ -45,6 +45,18 @@ class dkPage(BasePage):
     lwsjzxwhd_sqr = (By.CSS_SELECTOR,'#creatorName')
     lwsjzxwhd_whnr = (By.CSS_SELECTOR,'#modifyContent')
     lwsjzxwhd_bz = (By.CSS_SELECTOR,'#remark')
+    #集团总部应用系统上线审批
+    jtzbyyxtsxsp_bt = (By.CSS_SELECTOR,'#docTitle')
+    jtzbyyxtsxsp_zrr = (By.CSS_SELECTOR,'#zrPerson')
+    jtzbyyxtsxsp_dh = (By.CSS_SELECTOR,'#phone')
+    jtzbyyxtsxsp_xtmc = (By.CSS_SELECTOR,'#systemName')
+    jtzbyyxtsxsp_dmyj = (By.CSS_SELECTOR,'#confidentialBasis')
+    jtzbyyxtsxsp_zygn = (By.CSS_SELECTOR,'#primaryFunction')
+    jtzbyyxtsxsp_yhfw = (By.CSS_SELECTOR,'#userRange')
+
+
+
+
 
 
     def input_office_username(self,text):
