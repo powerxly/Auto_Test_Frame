@@ -11,7 +11,7 @@ from selenium.webdriver import ActionChains
 
 import time
 import datetime
-class Test_aionwfwj(unittest.TestCase):
+class Test_08aionwfwj(unittest.TestCase):
     sys.path.append("F:\\CODE\\Auto_Test_Framework")
     global current_timestamp
     current_timestamp = str(int(time.time()))
@@ -64,7 +64,7 @@ class Test_aionwfwj(unittest.TestCase):
         dk.click(['css selector', '#control2_view > button:nth-child(4)'])
         #alter = self.driver.switch_to_alert()
         #alter.accept()
-        time.sleep(15)
+        time.sleep(10)
         #退出当前登录用户
         # dk.change_to_window(1)
         # dk.close()
@@ -72,7 +72,8 @@ class Test_aionwfwj(unittest.TestCase):
         # dk.click(['xpath','/html/body/div[3]/form/div[1]/div/div[3]/div[1]/ul/li[1]/i'])
         # dk.js_execute('$(".confimBtn button:eq(0)").click()')
         #self.driver.execute_script('$(".confimBtn button:eq(0)").click()')
-        time.sleep(2)
+        self.driver.quit()
+
 
     def test_2_wwfwjsqzm(self):
         #dk.click(['xpath','/html/body/div[5]/div/div[1]/div[3]/button[1]'])
@@ -93,7 +94,7 @@ class Test_aionwfwj(unittest.TestCase):
         dk.click(['css selector', "[title=" + temptitle + "]"])
         #self.driver.execute_script('''$([])''')
         dk.change_to_window(2)
-        time.sleep(15)
+        time.sleep(5)
         title = self.driver.find_element_by_css_selector("#docTitle").get_attribute("value")
         self.assertEqual(title, temptitle)
         dk.click(['css selector','#control2_view > button:nth-child(4)'])
@@ -104,7 +105,8 @@ class Test_aionwfwj(unittest.TestCase):
         # dk.change_to_window(0)
         # dk.click(['xpath', '/html/body/div[3]/form/div[1]/div/div[3]/div[1]/ul/li[1]/i'])
         # dk.click(['css selector', '#control2_view > button:nth-child(4)'])
-        time.sleep(20)
+        time.sleep(10)
+        self.driver.quit()
 
     def test_3_wwfwjsqzm(self):
         """登录孙步昇查找待办,填写意见后，提交待办
@@ -133,7 +135,8 @@ class Test_aionwfwj(unittest.TestCase):
         dk.send_key(['css selector', '#jjjczyj\$_opinion_popup_content'], "同意，请继续流转")
         dk.click(['css selector', '#control2_view > button:nth-child(4)'])
 
-        time.sleep(15)
+        time.sleep(5)
+        self.driver.quit()
 
     def test_4_wwfwjsqzm(self):
         """登录刘洪国查找待办,填写意见后，提交待办
@@ -161,7 +164,9 @@ class Test_aionwfwj(unittest.TestCase):
         dk.send_key(['css selector', '#fsbshyj\$_opinion_popup_content'], "同意，请继续流转,我是lhg")
         dk.click(['css selector', '#control2_view > button:nth-child(4)'])
 
-        time.sleep(15)
+        time.sleep(5)
+
+        self.driver.quit()
 
     def test_5_wwfwjsqzm(self):
         """登录王君凤查找待办,填写意见后，提交待办结束
@@ -189,7 +194,8 @@ class Test_aionwfwj(unittest.TestCase):
         dk.send_key(['css selector', '#fsbshyj\$_opinion_popup_content'], "同意，请继续流转,我是王君凤")
         dk.click(['css selector', '#control2_view > button:nth-child(4)'])
 
-        time.sleep(15)
+        time.sleep(5)
+        self.driver.quit()
 
     # def test_6_wwfwjsqzm(self):
     #     """登录起草人田杰发起预约

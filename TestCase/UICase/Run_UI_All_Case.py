@@ -33,11 +33,16 @@ def report():
     else:
         now = time.strftime("%Y-%m-%d_%H_%M_%S_")
         # 需要查看每段时间的测试报告，可以这样写：
-        # report_name = os.getcwd() + '\\report\\'+now+'result.html'
+        #report_name = os.getcwd() + '\\report\\'+now+'result.html'
+        report_name = os.path.dirname(os.path.dirname(os.getcwd())) + '\\report\\'+now+'result.html'
         #report_name = os.path.dirname(os.getcwd()) + '\\UICase\\report\\result.html'
-        report_name = os.path.dirname(os.path.dirname(os.getcwd())) + '\\report\\UIAutoTest_result.html'
+        #report_name = os.path.dirname(os.path.dirname(os.getcwd())) + '\\report\\UIAutoTest_result.html'
     return report_name
 
+# if __name__ == '__main__':
+#     TestSuite = create_suite()
+#     result = BeautifulReport(TestSuite)
+#     result.report(filename="测试报告", description="测试用例执行情况", log_path=os.path.dirname(os.path.dirname(os.getcwd())) + '\\report\\')
 if __name__ == '__main__':
     TestSuite = create_suite()
     fp = open(report(), 'wb')
@@ -48,3 +53,4 @@ if __name__ == '__main__':
     )
     Runner.run(TestSuite)
     fp.close()
+

@@ -40,7 +40,11 @@ class dkPage(BasePage):
     yyxtsxsqd_sxnr = (By.CSS_SELECTOR,'#onlineContent')
     yyxtsxsqd_sxyx = (By.CSS_SELECTOR,'#onlineAffect2')
     yyxtsxsqd_bz = (By.CSS_SELECTOR,'#remark')
-
+    #蓝网数据中心维护单
+    lwsjzxwhd_sxbt = (By.CSS_SELECTOR,'#docTitle')
+    lwsjzxwhd_sqr = (By.CSS_SELECTOR,'#creatorName')
+    lwsjzxwhd_whnr = (By.CSS_SELECTOR,'#modifyContent')
+    lwsjzxwhd_bz = (By.CSS_SELECTOR,'#remark')
 
 
     def input_office_username(self,text):
