@@ -27,9 +27,13 @@ Vantpy框架基于Selenium+Yaml+Unittest搭建的WebUI自动化测试框架\
 #### 使用到的package：
 
 > pip install selenium
+>
 > pip install BeautifulReport
+>
 > pip install pyyaml
+>
 > pip install tomorrow3
+>
 > pip install requests
 >
 #### 第三方插件
