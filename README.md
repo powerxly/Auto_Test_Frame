@@ -10,7 +10,8 @@ Vantpy框架基于Selenium+Yaml+Unittest搭建的WebUI自动化测试框架\
 - 使用POM（页面对象模式）设计，使代码更加有逻辑性，测试脚本更加规范，后期更加容易维护以及复用性更高
 - 支持多种定位方式，包括（xpath/css/ID/text/link_text/name）
 - 框架集成了Selenium的常用定位方法，使元素定位更加方便
-- 使用HTMLTestRunner作为自动生成测试报告，报告更加美观，更加详细，内容更丰富
+- 单进程模式使用HTMLTestRunner作为自动生成测试报告，报告更加美观，更加详细，内容更丰富
+- 多进程模式使用BeautifulReport作为自动生成测试报告。
 - Logging日志输出，可以看到每一步做的操作
 - Yaml作为数据管理，实现代码，数据分离，使框架的使用起来更加简单
 
@@ -20,11 +21,18 @@ Vantpy框架基于Selenium+Yaml+Unittest搭建的WebUI自动化测试框架\
 #### 更新日志：
 1.01 封装了选择窗口、选择iframe、点击alert方法。
 20191026 将report样式从引用百度修改为离线样式。
+20191203 增加多进程及并发运行模式。
 #### 使用到的package：
 
 > pip install selenium
-
+> pip install BeautifulReport
 > pip install pyyaml
+> pip install tomorrow3
+> pip install requests
+>
+#### 第三方插件
+Autoit V3
+HTMLTestRunner3
 
 #### 支持的浏览器及驱动：
 基于Selenium支持的所有浏览器
@@ -111,7 +119,7 @@ Runner = HTMLTestRunner(
     description='测试用例执行情况'
 )
 ```
-#### 测试报告
+#### 测试报告（单进程模式）
 ![自动化测试报告](https://upload-images.jianshu.io/upload_images/3404835-b27828973a200528.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 #### 其他注意事项
