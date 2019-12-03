@@ -20,8 +20,10 @@ Vantpy框架基于Selenium+Yaml+Unittest搭建的WebUI自动化测试框架\
 
 #### 更新日志：
 1.01 封装了选择窗口、选择iframe、点击alert方法。
-20191026 将report样式从引用百度修改为离线样式。
-20191203 增加多进程及并发运行模式。
+
+1.02 将单进程report样式从引用百度修改为离线样式。
+
+1.03 增加多进程及并发运行模式。
 #### 使用到的package：
 
 > pip install selenium
